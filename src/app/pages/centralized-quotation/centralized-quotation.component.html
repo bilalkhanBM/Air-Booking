@@ -1,0 +1,1035 @@
+<app-page-title [title]="'Centralized Quotation'" [pagetitle]="'Quotation'"></app-page-title>
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-1">
+<div class="card">
+    <div class="card-body">
+        <h6 class="text-15 text-center">Quotation</h6>
+        <div class="grid grid-cols-1 gap-5 xl:grid-cols-12 mb-4">
+            <div class="xl:col-span-8">
+                <div class="relative inline-block w-2/3">
+                </div>
+            </div>
+            <div class="xl:col-span-4">
+                <div class="relative inline-block w-2/3">
+                    <input type="text" class="w-full py-2 pl-4 pr-8 form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Search" autocomplete="off">
+                    <lucide-angular name="search" [class]="'inline-block size-4 absolute right-2.5 top-2.5 text-slate-400 fill-slate-100 dark:text-zink-200 dark:fill-zink-500'"></lucide-angular>
+                </div>
+            </div>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full">
+                <thead class="ltr:text-left rtl:text-right">
+                    <tr>
+                        <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Create New <i class="ri-file-add-line" [appModalTrigger]="'addContactModal'"></i></th>
+                        <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Date</th>
+                        <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Quote#</th>
+                        <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Name</th>
+                        <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Mode</th>
+                        <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Phone & Email</th>
+                        <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd:bg-white even:bg-slate-50 dark:odd:bg-zink-700 dark:even:bg-zink-600">
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500"><i class="ri-edit-line"></i> &nbsp;<i class="ri-close-line"></i></td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">1-Mar-24</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">123</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Syed Hussain</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Air</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">12345678</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Not Quoted</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-slate-50 dark:odd:bg-zink-700 dark:even:bg-zink-600">
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500"><i class="ri-edit-line"></i> &nbsp;<i class="ri-close-line"></i></td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">1-Mar-24</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">456</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Noman</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Ocean</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">12345678</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Quoted</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-slate-50 dark:odd:bg-zink-700 dark:even:bg-zink-600">
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500"><i class="ri-edit-line"></i> &nbsp;<i class="ri-close-line"></i></td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">1-Mar-24</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">235</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Saqib</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Trucking </td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">12345678</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Not Converted</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-slate-50 dark:odd:bg-zink-700 dark:even:bg-zink-600">
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500"><i class="ri-edit-line"></i> &nbsp;<i class="ri-close-line"></i></td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">1-Mar-24</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">123</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Burhan</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Brokerage</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">12345678</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Accepted</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-slate-50 dark:odd:bg-zink-700 dark:even:bg-zink-600">
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500"><i class="ri-edit-line"></i> &nbsp;<i class="ri-close-line"></i></td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">1-Mar-24</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">123</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Syed Hussain</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Air</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">12345678</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Not Quoted</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-slate-50 dark:odd:bg-zink-700 dark:even:bg-zink-600">
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500"><i class="ri-edit-line"></i> &nbsp;<i class="ri-close-line"></i></td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">1-Mar-24</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">123</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Syed Hussain</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Air</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">12345678</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Not Quoted</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-slate-50 dark:odd:bg-zink-700 dark:even:bg-zink-600">
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500"><i class="ri-edit-line"></i> &nbsp;<i class="ri-close-line"></i></td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">1-Mar-24</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">123</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Syed Hussain</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Air</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">12345678</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Not Quoted</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-slate-50 dark:odd:bg-zink-700 dark:even:bg-zink-600">
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500"><i class="ri-edit-line"></i> &nbsp;<i class="ri-close-line"></i></td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">1-Mar-24</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">123</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Syed Hussain</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Air</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">12345678</td>
+                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">Not Quoted</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div><!--end card-->
+</div><!--end grid-->
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-12" *ngIf="air">
+
+ <div class="xl:col-span-3">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="mb-4 text-15">Sub Menu of Quotation</h6>
+                <div id='external-events' class="flex flex-col gap-3 mb-4">
+                    <button (click)="toggle('Inquiry')" data-class="transition-all w-[100%] text-custom-500 !bg-custom-100 dark:!bg-custom-500/20 border-none rounded-md py-1.5 px-3" class='text-left external-event fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event text-custom-500 btn bg-custom-100 hover:text-white hover:bg-custom-600 focus:text-white focus:bg-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:ring active:ring-custom-100 dark:bg-custom-500/20 dark:text-custom-500 dark:hover:bg-custom-500 dark:hover:text-white dark:focus:bg-custom-500 dark:focus:text-white dark:active:bg-custom-500 dark:active:text-white dark:ring-custom-400/20'>
+                        Inquiry and Customer Details
+                    </button>
+                    <button (click)="toggle('Shipment')" data-class="text-green-500 w-[100%] !bg-green-100 dark:!bg-green-500/20 border-none rounded-md py-1.5 px-3" class='text-left text-green-500 bg-green-100 external-event fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event btn hover:text-white hover:bg-green-600 focus:text-white focus:bg-green-600 focus:ring focus:ring-green-100 active:text-white active:bg-green-600 active:ring active:ring-green-100 dark:bg-green-500/20 dark:text-green-4000'>
+                        Shipment Details
+                    </button>
+                    <!-- <button (click)="toggle('Pickup')" data-class="text-yellow-500 w-[100%] !bg-yellow-100 dark:!bg-yellow-500/20 border-none rounded-md py-1.5 px-3" class='text-yellow-500 bg-yellow-100 external-event fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event btn hover:text-white hover:bg-yellow-600 focus:text-white focus:bg-yellow-600 focus:ring focus:ring-yellow-100 active:text-white active:bg-yellow-600 active:ring active:ring-yellow-100 dark:bg-yellow-500/20 dark:text-yellow-500 dark:hover:bg-yellow-500 dark:hover:text-white dark:focus:bg-yellow-500 dark:focus:text-white dark:active:bg-yellow-500 dark:active:text-white dark:ring-yellow-400/20'>
+                        Pickup & Delivery 
+                    </button> -->
+                    <button (click)="toggle('Air')" data-class="text-sky-500 w-[100%] !bg-sky-100 dark:!bg-sky-500/20 border-none rounded-md py-1.5 px-3" class='text-left external-event fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event text-sky-500 btn bg-sky-100 hover:text-white hover:bg-sky-600 focus:text-white focus:bg-sky-600 focus:ring focus:ring-sky-100 active:text-white active:bg-sky-600 active:ring active:ring-sky-100 dark:bg-sky-500/20 dark:text-sky-400 dark:hover:bg-sky-500 dark:hover:text-white dark:focus:bg-sky-500 dark:focus:text-white dark:active:bg-sky-500 dark:active:text-white dark:ring-sky-400/20'>
+                        Air Shipment Details
+                    </button>
+                    <button (click)="toggle('Rates')" data-class="w-[100%] text-purple-500 !bg-purple-100 dark:!bg-purple-500/20 border-none rounded-md py-1.5 px-3" class='text-left text-purple-500 bg-purple-100 external-event fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event btn hover:text-white hover:bg-purple-600 focus:text-white focus:bg-purple-600 focus:ring focus:ring-purple-100 active:text-white active:bg-purple-600 active:ring active:ring-purple-100 dark:bg-purple-500/20 dark:text-purple-500 dark:hover:bg-purple-500 dark:hover:text-white dark:focus:bg-purple-500 dark:focus:text-white dark:active:bg-purple-500 dark:active:text-white dark:ring-purple-400/20'>
+                        Rates and Charges
+                    </button>
+                    <button (click)="toggle('Documents')" data-class="text-yellow-500 w-[100%] !bg-yellow-100 dark:!bg-yellow-500/20 border-none rounded-md py-1.5 px-3" class='text-left text-yellow-500 bg-yellow-100 external-event fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event btn hover:text-white hover:bg-yellow-600 focus:text-white focus:bg-yellow-600 focus:ring focus:ring-yellow-100 active:text-white active:bg-yellow-600 active:ring active:ring-yellow-100 dark:bg-yellow-500/20 dark:text-yellow-500 dark:hover:bg-yellow-500 dark:hover:text-white dark:focus:bg-yellow-500 dark:focus:text-white dark:active:bg-yellow-500 dark:active:text-white dark:ring-yellow-400/20'>
+                        Documents  
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div><!--end col-->
+
+  <div class="xl:col-span-9" *ngIf="Inquiry" >
+        <div class="card">
+            <div class="card-body">
+                <form action="javascript:void(0);">
+                    <div class="grid grid-cols-1 gap-x-5 md:grid-cols-2 xl:grid-cols-2">
+                        <div class="mb-2">
+                            <label for="firstNameInput2" class="inline-block mb-2 text-base font-medium">Inquiry Number/ID <span class="text-red-500">*</span></label>
+                            <input type="text" id="firstNameInput2" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Inquiry Number/ID" value="AF02334" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="lastNameInput2" class="inline-block mb-2 text-base font-medium">Inquiry Source<span class="text-red-500">*</span></label>
+                            <input type="text" id="lastNameInput2" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Inquiry Source" value="123654" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="UsernameInput" class="inline-block mb-2 text-base font-medium">Customer Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="UsernameInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Customer Name" value="Taha Masood" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="cityInput" class="inline-block mb-2 text-base font-medium">Customer Contact <span class="text-red-500">*</span></label>
+                            <input type="text" id="cityInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Customer Contact" value="123456" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="stateInput" class="inline-block mb-2 text-base font-medium">Date of Inquiry <span class="text-red-500">*</span></label>
+                            <select class="form-select border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="stateInput" required>
+                                <option selected="" disabled="" value="">Choose...</option>
+                                <option>Name</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="zipInput" class="inline-block mb-2 text-base font-medium">Customer E-mail <span class="text-red-500">*</span></label>
+                            <input type="email" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Customer E-mail" value="Explore@digitalhubway@gmail.com" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="zipInput" class="inline-block mb-2 text-base font-medium">Type<span class="text-red-500">*</span></label>
+                            <input type="text" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Type" value="Air" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="zipInput" class="inline-block mb-2 text-base font-medium">Customer Address <span class="text-red-500">*</span></label>
+                            <input type="text" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Customer Address" value="" required>
+                        </div>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                        <button type="button" class="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-700 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10"><lucide-angular name="x" [class]="'inline-block size-4'"></lucide-angular> <span class="align-middle">Cancel</span></button>
+                        <button type="submit" class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100">Submit</button>
+                    </div>
+                </form>  
+            </div>
+        </div>
+    </div><!--end col-->  
+  
+    <div class="xl:col-span-9" *ngIf="Shipment" >
+        <div class="card">
+            <div class="card-body">
+                <form action="javascript:void(0);">
+                    <div class="grid grid-cols-1 gap-x-5 md:grid-cols-2 xl:grid-cols-3">
+                        <div class="mb-2">
+                            <label for="firstNameInput2" class="inline-block mb-2 text-base font-medium">Origin Airport<span class="text-red-500">*</span></label>
+                            <input type="text" id="firstNameInput2" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Origin Airport" value="Airport Code e.g YYZ or KHI" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="lastNameInput2" class="inline-block mb-2 text-base font-medium">Destination Airport<span class="text-red-500">*</span></label>
+                            <input type="text" id="lastNameInput2" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Destination Airport" value="Airport Code e.g YYZ or KHI" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="UsernameInput" class="inline-block mb-2 text-base font-medium">Mode of Transport<span class="text-red-500">*</span></label>
+                            <input type="text" id="UsernameInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Mode of Transport" value="(e.g., direct flight, connecting flight)" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="cityInput" class="inline-block mb-2 text-base font-medium">Preferred Airline<span class="text-red-500">*</span></label>
+                            <input type="text" id="cityInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Preferred Airline" value="123456" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="stateInput" class="inline-block mb-2 text-base font-medium">Hazardous Material<span class="text-red-500">*</span></label>
+                            <select class="form-select border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="stateInput" required>
+                                <option selected="" disabled="" value="">Choose...</option>
+                                <option>No</option>
+                                <option>Yes</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="zipInput" class="inline-block mb-2 text-base font-medium">Value of Goods<span class="text-red-500">*</span></label>
+                            <input type="text" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Value of Goods" value="$$$$" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="stateInput" class="inline-block mb-2 text-base font-medium">Export Customs Clearance<span class="text-red-500">*</span></label>
+                            <select class="form-select border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="stateInput" required>
+                                <option selected="" disabled="" value="">Choose...</option>
+                                <option>No</option>
+                                <option>Yes</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="stateInput" class="inline-block mb-2 text-base font-medium">Import Customs Clearance<span class="text-red-500">*</span></label>
+                            <select class="form-select border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="stateInput" required>
+                                <option selected="" disabled="" value="">Choose...</option>
+                                <option>No</option>
+                                <option>Yes</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="zipInput" class="inline-block mb-2 text-base font-medium">HS Code<span class="text-red-500">*</span></label>
+                            <input type="text" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter HS Code" value="codes" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="zipInput" class="inline-block mb-2 text-base font-medium">HS Code for Other <span class="text-red-500">*</span></label>
+                            <input type="text" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter HS Code for Other" value="Text Field for details " required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="stateInput" class="inline-block mb-2 text-base font-medium">Insurance Requirements<span class="text-red-500">*</span></label>
+                            <select class="form-select border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="stateInput" required>
+                                <option selected="" disabled="" value="">Choose...</option>
+                                <option>No</option>
+                                <option>Yes</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="stateInput" class="inline-block mb-2 text-base font-medium">Packaging Requirements<span class="text-red-500">*</span></label>
+                            <select class="form-select border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="stateInput" required>
+                                <option selected="" disabled="" value="">Choose...</option>
+                                <option>No</option>
+                                <option>Yes</option>
+                            </select>
+                        </div>
+                        <div class="xl:col-span-3 mb-2">
+                            <div>
+                                <label for="textArea" class="inline-block mb-2 text-base font-medium">Additional Info or Notes</label>
+                                <textarea class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="textArea" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                        <button type="button" class="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-700 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10"><lucide-angular name="x" [class]="'inline-block size-4'"></lucide-angular> <span class="align-middle">Cancel</span></button>
+                        <button type="submit" class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100">Submit</button>
+                    </div>
+                </form>  
+            </div>
+        </div>
+    </div><!--end col-->  
+    
+    <div class="xl:col-span-9" *ngIf="Air">
+        <div class="card">
+            <div class="card-body">
+                <form action="javascript:void(0);">
+                    <div class="grid grid-cols-1 gap-x-5 md:grid-cols-2 xl:grid-cols-3">
+                        <div class="xl:col-span-3 mb-2">
+                            <div>
+                                <label for="textArea" class="inline-block mb-2 text-base font-medium">Description of Goods</label>
+                                <textarea class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="textArea" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <label for="firstNameInput2" class="inline-block mb-2 text-base font-medium">Number of Packages<span class="text-red-500">*</span></label>
+                            <input type="text" id="firstNameInput2" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Number of Packages" value="123456" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="lastNameInput2" class="inline-block mb-2 text-base font-medium">Approx Weight<span class="text-red-500">*</span></label>
+                            <input type="text" id="lastNameInput2" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Approx Weight" value="80 KG" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="cityInput" class="inline-block mb-2 text-base font-medium">Preferred Pickup Date and Time<span class="text-red-500">*</span></label>
+                            <input type="datetime-local" id="cityInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" required>
+                        </div> 
+                        <div class="xl:col-span-3 mb-4">
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead class="ltr:text-left rtl:text-right">
+                                        <tr>
+                                            <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Pcs.</th>
+                                            <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Lenght</th>
+                                            <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">width</th>
+                                            <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Height</th>
+                                            <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Vol. wt. lbs/pc</th>
+                                            <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Vol. wt. Kgs/pc</th>
+                                            <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">act. lbs/pc</th>
+                                            <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Act. Kg/pc</th>
+                                            <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">kgs/pc</th>
+                                            <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Total lbs</th>
+                                            <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">Total kg</th>
+                                            <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">CF</th>
+                                            <th class="px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500">M3</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd:bg-white even:bg-slate-50 dark:odd:bg-zink-700 dark:even:bg-zink-600">
+                                            <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">2</td>
+                                            <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">20</td>
+                                            <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">123</td>
+                                            <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">20</td>
+                                            <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">115.66</td>
+                                            <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">52.40</td>
+                                            <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">0</td>
+                                            <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">0</td>
+                                            <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">0.0</td>
+                                            <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">0</td>
+                                            <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">0.0</td>
+                                            <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">11.1</td>
+                                            <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">0.315</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <label for="cityInput" class="inline-block mb-2 text-base font-medium">Preferred Delivery Date and Time<span class="text-red-500">*</span></label>
+                            <input type="datetime-local" id="cityInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200"  required>
+                        </div>   
+                        <div class="mb-2">
+                            <label for="UsernameInput" class="inline-block mb-2 text-base font-medium">Pickup Address<span class="text-red-500">*</span></label>
+                            <!-- <div id="gmaps-overlay" class="gmaps"> -->
+                                <google-map height="150px" width="100%" ></google-map>
+                            <!-- </div> -->
+                        </div>
+                        <div class="mb-3">
+                            <label for="cityInput" class="inline-block mb-2 text-base font-medium">Delivery Address<span class="text-red-500">*</span></label>
+                            <!-- <div id="gmaps-overlay" class="gmaps"> -->
+                                <google-map height="150px" width="100%" ></google-map>
+                            <!-- </div> -->
+                        </div> 
+                    </div>
+                    <div class="flex justify-end gap-2">
+                        <button type="button" class="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-700 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10"><lucide-angular name="x" [class]="'inline-block size-4'"></lucide-angular> <span class="align-middle">Cancel</span></button>
+                        <button type="submit" class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100">Submit</button>
+                    </div>
+                </form>  
+            </div>
+        </div>
+    </div><!--end col--> 
+    
+    <div class="xl:col-span-9" *ngIf="Rates">
+        <div class="card">
+            <div class="card-body">
+                <form action="javascript:void(0);">
+                    <div class="grid grid-cols-1 gap-x-5 md:grid-cols-2 xl:grid-cols-4">
+                        <div class="xl:col-span-2 mb-4">
+                            <h6 class="mb-4 text-15 text-center">Actual Cost</h6>
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead class="ltr:text-left rtl:text-right ">
+                                        <tr>
+                                            <th class="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zink-500">Carrier</th>
+                                            <th class="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zink-500">Airline Names</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="">
+                                        <tr>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Freight Charges</td>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Fuel Surcharges</td>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Security Fees</td>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Handling Fees</td>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Customs Brokerage Fees</td>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Documentation</td>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="xl:col-span-2 mb-4">
+                            <h6 class="mb-4 text-15 text-center">Quoted</h6>
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead class="ltr:text-left rtl:text-right ">
+                                    <tr>
+                                        <th class="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zink-500">Carrier</th>
+                                        <th class="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zink-500">Airline Names</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="">
+                                    <tr>
+                                        <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Freight Charges</td>
+                                        <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Fuel Surcharges</td>
+                                        <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Security Fees</td>
+                                        <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Handling Fees</td>
+                                        <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Customs Brokerage Fees</td>
+                                        <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Documentation</td>
+                                        <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+                        <div class="xl:col-span-2 mb-2">
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead class="ltr:text-left rtl:text-right ">
+                                        <tr>
+                                            <th class="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zink-500">Total</th>
+                                            <th class="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zink-500" colspan="2">0</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="">
+                                        <tr>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Currency</td>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Dropdown</td>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Amount</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> 
+                        </div>
+                        <div class="xl:col-span-2 mb-2">
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead class="ltr:text-left rtl:text-right ">
+                                        <tr>
+                                            <th class="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zink-500">Total</th>
+                                            <th class="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zink-500" colspan="2">0</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="">
+                                        <tr>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Currency</td>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Dropdown</td>
+                                            <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Amount</td>                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> 
+                        </div>
+                        <div class="xl:col-span-4 mb-2">
+                            <div>
+                                <label for="textArea" class="inline-block mb-2 text-base font-medium">Instructions</label>
+                                <textarea class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="textArea" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="xl:col-span-1 mb-2">
+                            <label for="firstNameInput2" class="inline-block mb-2 text-base font-medium">Payment Method<span class="text-red-500">*</span></label>
+                            <input type="text" id="firstNameInput2" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Payment Method" value="123456" required>
+                        </div>
+                        <div class="xl:col-span-1 mb-2">
+                            <label for="lastNameInput2" class="inline-block mb-2 text-base font-medium">Payment Terms<span class="text-red-500">*</span></label>
+                            <input type="text" id="lastNameInput2" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Payment Terms" value="advance payment 50%" required>
+                        </div>
+                        <div class="xl:col-span-2 mb-2">
+                            <label for="cityInput" class="inline-block mb-2 text-base font-medium">Validity of Quote <span class="text-red-500">*</span></label>
+                            <input type="datetime-local" id="cityInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" required>
+                        </div>
+                        <div class="xl:col-span-4 mb-2">
+                            <label for="cityInput" class="inline-block mb-2 text-base font-medium">Quote Version - 1 Dated<span class="text-red-500">*</span></label>
+                            <input type="datetime-local" id="cityInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" required>
+                        </div> 
+                        <div class="xl:col-span-4 mb-2">
+                            <label for="cityInput" class="inline-block mb-2 text-base font-medium">Quote Version - 2 Dated<span class="text-red-500">*</span></label>
+                            <input type="datetime-local" id="cityInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" required>
+                        </div>  
+                        <div class="xl:col-span-4 mb-2 flex justify-end gap-2">
+                            <button type="submit" class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100">Download</button>
+                            <button type="submit" class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100">Print</button>
+                            <button type="submit" class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100">Save</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                        <button type="button" class="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-700 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10"><lucide-angular name="x" [class]="'inline-block size-4'"></lucide-angular> <span class="align-middle">Cancel</span></button>
+                        <button type="submit" class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100">Create Booking</button>
+                    </div>
+                </form>  
+            </div>
+        </div>
+    </div><!--end col--> 
+
+    <div class="xl:col-span-9" *ngIf="Documents">
+        <div class="card">
+            <div class="card-body">
+                <form action="javascript:void(0);">
+                    <div class="grid grid-cols-1 gap-x-5 md:grid-cols-2 xl:grid-cols-3">
+                        <div>
+                            <input type="file" class="cursor-pointer form-file form-file-sm border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500" placeholder="Enter your name">
+                        </div>
+                        <div>
+                            <button type="button" class="text-white bg-green-500 border-green-500 btn hover:text-white hover:bg-green-600 hover:border-green-600 focus:text-white focus:bg-green-600 focus:border-green-600 focus:ring focus:ring-green-100 active:text-white active:bg-green-600 active:border-green-600 active:ring active:ring-green-100 dark:ring-green-400/10"><lucide-angular name="download" [class]="'inline-block size-4 mr-1'"></lucide-angular> <span class="align-middle"> Download</span></button>
+                            &nbsp;
+                            <button type="reset"  class="text-white bg-red-500 border-red-500 btn hover:text-white hover:bg-red-600 hover:border-red-600 focus:text-white focus:bg-red-600 focus:border-red-600 focus:ring focus:ring-red-100 active:text-white active:bg-red-600 active:border-red-600 active:ring active:ring-red-100 dark:ring-custom-400/20">Delete</button>                            
+                        </div>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                        <button type="button" class="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-700 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10"><lucide-angular name="x" [class]="'inline-block size-4'"></lucide-angular> <span class="align-middle">Cancel</span></button>
+                        <button type="submit" class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100">Save</button>
+                    </div>
+                </form>  
+            </div>
+        </div>
+    </div><!--end col--> 
+
+</div><!--end grid-->
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-12" *ngIf="ocean">
+
+    <div class="xl:col-span-3">
+           <div class="card">
+               <div class="card-body">
+                   <h6 class="mb-4 text-15">Sub Menu of Quotation</h6>
+                   <div id='external-events' class="flex flex-col gap-3 mb-4">
+                       <button (click)="toggle('Inquiry')" data-class="transition-all w-[100%] text-custom-500 !bg-custom-100 dark:!bg-custom-500/20 border-none rounded-md py-1.5 px-3" class='text-left external-event fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event text-custom-500 btn bg-custom-100 hover:text-white hover:bg-custom-600 focus:text-white focus:bg-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:ring active:ring-custom-100 dark:bg-custom-500/20 dark:text-custom-500 dark:hover:bg-custom-500 dark:hover:text-white dark:focus:bg-custom-500 dark:focus:text-white dark:active:bg-custom-500 dark:active:text-white dark:ring-custom-400/20'>
+                           Inquiry and Customer Details
+                       </button>
+                       <button (click)="toggle('Shipment')" data-class="text-green-500 w-[100%] !bg-green-100 dark:!bg-green-500/20 border-none rounded-md py-1.5 px-3" class='text-left text-green-500 bg-green-100 external-event fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event btn hover:text-white hover:bg-green-600 focus:text-white focus:bg-green-600 focus:ring focus:ring-green-100 active:text-white active:bg-green-600 active:ring active:ring-green-100 dark:bg-green-500/20 dark:text-green-4000'>
+                           Shipment Details
+                       </button>
+                       <!-- <button (click)="toggle('Pickup')" data-class="text-yellow-500 w-[100%] !bg-yellow-100 dark:!bg-yellow-500/20 border-none rounded-md py-1.5 px-3" class='text-yellow-500 bg-yellow-100 external-event fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event btn hover:text-white hover:bg-yellow-600 focus:text-white focus:bg-yellow-600 focus:ring focus:ring-yellow-100 active:text-white active:bg-yellow-600 active:ring active:ring-yellow-100 dark:bg-yellow-500/20 dark:text-yellow-500 dark:hover:bg-yellow-500 dark:hover:text-white dark:focus:bg-yellow-500 dark:focus:text-white dark:active:bg-yellow-500 dark:active:text-white dark:ring-yellow-400/20'>
+                           Pickup & Delivery 
+                       </button> -->
+                       <button (click)="toggle('Air')" data-class="text-sky-500 w-[100%] !bg-sky-100 dark:!bg-sky-500/20 border-none rounded-md py-1.5 px-3" class='text-left external-event fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event text-sky-500 btn bg-sky-100 hover:text-white hover:bg-sky-600 focus:text-white focus:bg-sky-600 focus:ring focus:ring-sky-100 active:text-white active:bg-sky-600 active:ring active:ring-sky-100 dark:bg-sky-500/20 dark:text-sky-400 dark:hover:bg-sky-500 dark:hover:text-white dark:focus:bg-sky-500 dark:focus:text-white dark:active:bg-sky-500 dark:active:text-white dark:ring-sky-400/20'>
+                           Route & Carrier
+                       </button>
+                       <button (click)="toggle('Rates')" data-class="w-[100%] text-purple-500 !bg-purple-100 dark:!bg-purple-500/20 border-none rounded-md py-1.5 px-3" class='text-left text-purple-500 bg-purple-100 external-event fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event btn hover:text-white hover:bg-purple-600 focus:text-white focus:bg-purple-600 focus:ring focus:ring-purple-100 active:text-white active:bg-purple-600 active:ring active:ring-purple-100 dark:bg-purple-500/20 dark:text-purple-500 dark:hover:bg-purple-500 dark:hover:text-white dark:focus:bg-purple-500 dark:focus:text-white dark:active:bg-purple-500 dark:active:text-white dark:ring-purple-400/20'>
+                           Rates and Charges
+                       </button>
+                       <button (click)="toggle('Documents')" data-class="text-yellow-500 w-[100%] !bg-yellow-100 dark:!bg-yellow-500/20 border-none rounded-md py-1.5 px-3" class='text-left text-yellow-500 bg-yellow-100 external-event fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event btn hover:text-white hover:bg-yellow-600 focus:text-white focus:bg-yellow-600 focus:ring focus:ring-yellow-100 active:text-white active:bg-yellow-600 active:ring active:ring-yellow-100 dark:bg-yellow-500/20 dark:text-yellow-500 dark:hover:bg-yellow-500 dark:hover:text-white dark:focus:bg-yellow-500 dark:focus:text-white dark:active:bg-yellow-500 dark:active:text-white dark:ring-yellow-400/20'>
+                           Documents  
+                       </button>
+                   </div>
+               </div>
+           </div>
+       </div><!--end col-->
+   
+     <div class="xl:col-span-9" *ngIf="Inquiry" >
+           <div class="card">
+               <div class="card-body">
+                   <form action="javascript:void(0);">
+                       <div class="grid grid-cols-1 gap-x-5 md:grid-cols-2 xl:grid-cols-2">
+                           <div class="mb-2">
+                               <label for="firstNameInput2" class="inline-block mb-2 text-base font-medium">Inquiry Number/ID<span class="text-red-500">*</span></label>
+                               <input type="text" id="firstNameInput2" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Inquiry Number/ID" value="AF02334" required>
+                           </div>
+                           <div class="mb-2">
+                               <label for="stateInput" class="inline-block mb-2 text-base font-medium">Date of Inquiry<span class="text-red-500">*</span></label>
+                               <input type="date" id="cityInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200"  required>
+                           </div>
+                           <div class="mb-2">
+                               <label for="lastNameInput2" class="inline-block mb-2 text-base font-medium">Inquiry Source<span class="text-red-500">*</span></label>
+                               <input type="text" id="lastNameInput2" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Inquiry Source" value="123654" required>
+                           </div>
+                           <div class="mb-2">
+                            <label for="stateInput" class="inline-block mb-2 text-base font-medium">Type<span class="text-red-500">*</span></label>
+                            <select class="form-select border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="stateInput" required>
+                                <option selected="" disabled="" value="">Choose...</option>
+                                <option>Ocean</option>
+                            </select>
+                           </div>
+                           <div class="mb-2">
+                               <label for="UsernameInput" class="inline-block mb-2 text-base font-medium">Customer Name<span class="text-red-500">*</span></label>
+                               <input type="text" id="UsernameInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Customer Name" value="Taha Masood" required>
+                           </div>
+                           <div class="mb-2">
+                               <label for="cityInput" class="inline-block mb-2 text-base font-medium">Customer Contact<span class="text-red-500">*</span></label>
+                               <input type="text" id="cityInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Customer Contact" value="123456" required>
+                           </div>
+                           <div class="mb-2">
+                               <label for="zipInput" class="inline-block mb-2 text-base font-medium">Customer E-mail<span class="text-red-500">*</span></label>
+                               <input type="email" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Customer E-mail" value="Explore@digitalhubway@gmail.com" required>
+                           </div>
+                           <div class="mb-2">
+                               <label for="zipInput" class="inline-block mb-2 text-base font-medium">Customer Address<span class="text-red-500">*</span></label>
+                               <input type="text" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Customer Address" value="" required>
+                           </div>
+                       </div>
+                       <div class="flex justify-end gap-2">
+                           <button type="button" class="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-700 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10"><lucide-angular name="x" [class]="'inline-block size-4'"></lucide-angular> <span class="align-middle">Cancel</span></button>
+                           <button type="submit" class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100">Submit</button>
+                       </div>
+                   </form>  
+               </div>
+           </div>
+       </div><!--end col-->  
+     
+       <div class="xl:col-span-9" *ngIf="Shipment" >
+           <div class="card">
+               <div class="card-body">
+                   <form action="javascript:void(0);">
+                       <div class="grid grid-cols-1 gap-x-5 md:grid-cols-2 xl:grid-cols-2">
+                           <div class="mb-2">
+                               <label for="firstNameInput2" class="inline-block mb-2 text-base font-medium">Customer Name<span class="text-red-500">*</span></label>
+                               <input type="text" id="firstNameInput2" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Customer Name" value="Taha Masood" required>
+                           </div>
+                           <div class="mb-2">
+                               <label for="lastNameInput2" class="inline-block mb-2 text-base font-medium">Customer Contact<span class="text-red-500">*</span></label>
+                               <input type="text" id="lastNameInput2" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Customer Contact" value="1234568" required>
+                           </div>
+                           <div class="mb-2">
+                               <label for="UsernameInput" class="inline-block mb-2 text-base font-medium">Customer E-mail<span class="text-red-500">*</span></label>
+                               <input type="email" id="UsernameInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Customer Email" value="explore@digitalhubway@gmail.com" required>
+                           </div>
+                           <div class="mb-2">
+                               <label for="cityInput" class="inline-block mb-2 text-base font-medium">Customer Address<span class="text-red-500">*</span></label>
+                               <input type="text" id="cityInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Customer Address" value="" required>
+                           </div>
+                       </div>
+                       <div class="grid grid-cols-1 gap-x-5 md:grid-cols-1 xl:grid-cols-4">
+                        <div class="mb-2">
+                            <label for="zipInput" class="inline-block mb-2 text-base font-medium">Quantity<span class="text-red-500">*</span></label>
+                            <input type="text" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Quantity" value="1" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="zipInput" class="inline-block mb-2 text-base font-medium">Description<span class="text-red-500">*</span></label>
+                            <input type="text" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Description" value="1" required>
+                       </div>
+                        <div class="mb-2">
+                            <label for="zipInput" class="inline-block mb-2 text-base font-medium">Cnt/Pkg<span class="text-red-500">*</span></label>
+                            <input type="text" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Cnt/Pkg" value="20'Ft Bulk" required>
+                        </div>
+                        <div class="mt-3">
+                            <button type="submit" class="text-white mt-4 transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100">Add</button>
+                        </div>
+                        <div class="mt-5">
+                            <div class="flex items-center gap-2">
+                                <label for="checkboxDefault2" class="align-middle">
+                                    Trucking
+                                </label>
+                                <input id="checkboxDefault2" class="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zink-600 dark:border-zink-500 checked:bg-green-500 checked:border-green-500 dark:checked:bg-green-500 dark:checked:border-green-500 checked:disabled:bg-green-400 checked:disabled:border-green-400" type="checkbox" value="">
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <div class="flex items-center gap-2">
+                                <label for="checkboxDefault2" class="align-middle">
+                                    Drayage
+                                </label>
+                                <input id="checkboxDefault2" class="size-4 border rounded-sm appearance-none cursor-pointer bg-slate-100 border-slate-200 dark:bg-zink-600 dark:border-zink-500 checked:bg-green-500 checked:border-green-500 dark:checked:bg-green-500 dark:checked:border-green-500 checked:disabled:bg-green-400 checked:disabled:border-green-400" type="checkbox" value="">
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <div class="flex items-center gap-2">
+                                <label for="checkboxDefault2" class="align-middle">
+                                    Pickup
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <div class="flex items-center gap-2">
+                                <label for="checkboxDefault2" class="align-middle">
+                                    Dropoff
+                                </label>
+                            </div>
+                        </div>
+                        </div>
+                       <div class="flex justify-end gap-2">
+                           <button type="button" class="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-700 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10"><lucide-angular name="x" [class]="'inline-block size-4'"></lucide-angular> <span class="align-middle">Cancel</span></button>
+                           <button type="submit" class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100">Submit</button>
+                       </div>
+                   </form>  
+               </div>
+           </div>
+       </div><!--end col-->  
+       
+       <div class="xl:col-span-9" *ngIf="Air">
+           <div class="card">
+               <div class="card-body">
+                   <form action="javascript:void(0);">
+                    <div class="grid grid-cols-1 gap-x-5 md:grid-cols-2 xl:grid-cols-2">
+                        <div class="mb-2">
+                            <label for="firstNameInput2" class="inline-block mb-2 text-base font-medium">Routing Service Type<span class="text-red-500">*</span></label>
+                            <input type="text" id="firstNameInput2" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="" value="Port to Port" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="stateInput" class="inline-block mb-2 text-base font-medium">Mode of Transport<span class="text-red-500">*</span></label>
+                            <input type="text" id="cityInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" value="Vessel, Containerized" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="lastNameInput2" class="inline-block mb-2 text-base font-medium">Carrier Name<span class="text-red-500">*</span></label>
+                            <input type="text" id="lastNameInput2" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="" value="123654" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="UsernameInput" class="inline-block mb-2 text-base font-medium">Route (via ports)<span class="text-red-500">*</span></label>
+                            <input type="text" id="UsernameInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="" value="" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="cityInput" class="inline-block mb-2 text-base font-medium">Origin<span class="text-red-500">*</span></label>
+                            <input type="text" id="cityInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="" value="123456" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="zipInput" class="inline-block mb-2 text-base font-medium">Destination<span class="text-red-500">*</span></label>
+                            <input type="email" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="" value="" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="zipInput" class="inline-block mb-2 text-base font-medium">Port of Loading<span class="text-red-500">*</span></label>
+                            <input type="text" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="" value="" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="zipInput" class="inline-block mb-2 text-base font-medium">Port of Discharge<span class="text-red-500">*</span></label>
+                            <input type="text" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="" value="" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="zipInput" class="inline-block mb-2 text-base font-medium">Place of Receipt<span class="text-red-500">*</span></label>
+                            <input type="text" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="" value="" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="zipInput" class="inline-block mb-2 text-base font-medium">Place of Discharge<span class="text-red-500">*</span></label>
+                            <input type="text" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="" value="" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="zipInput" class="inline-block mb-2 text-base font-medium">Cargo Description<span class="text-red-500">*</span></label>
+                            <input type="text" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="" value="" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="zipInput" class="inline-block mb-2 text-base font-medium">Gross Weight<span class="text-red-500">*</span></label>
+                            <input type="text" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="" value="" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="zipInput" class="inline-block mb-2 text-base font-medium">Special Instructions<span class="text-red-500">*</span></label>
+                            <input type="text" id="zipInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="" value="" required>
+                        </div>
+                     </div>
+                       <div class="flex justify-end gap-2">
+                           <button type="button" class="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-700 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10"><lucide-angular name="x" [class]="'inline-block size-4'"></lucide-angular> <span class="align-middle">Cancel</span></button>
+                           <button type="submit" class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100">Submit</button>
+                       </div>
+                   </form>  
+               </div>
+           </div>
+       </div><!--end col--> 
+       
+       <div class="xl:col-span-9" *ngIf="Rates">
+           <div class="card">
+               <div class="card-body">
+                   <form action="javascript:void(0);">
+                       <div class="grid grid-cols-1 gap-x-5 md:grid-cols-2 xl:grid-cols-4">
+                           <div class="xl:col-span-2 mb-4">
+                               <h6 class="mb-4 text-15 text-center">Actual Cost</h6>
+                               <div class="overflow-x-auto">
+                                   <table class="w-full">
+                                       <thead class="ltr:text-left rtl:text-right ">
+                                           <tr>
+                                               <th class="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zink-500">Carrier</th>
+                                               <th class="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zink-500">Airline Names</th>
+                                           </tr>
+                                       </thead>
+                                       <tbody class="">
+                                           <tr>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Freight Charges</td>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                           </tr>
+                                           <tr>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Fuel Surcharges</td>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                           </tr>
+                                           <tr>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Security Fees</td>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                           </tr>
+                                           <tr>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Handling Fees</td>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                           </tr>
+                                           <tr>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Customs Brokerage Fees</td>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                           </tr>
+                                           <tr>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Documentation</td>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                           </tr>
+                                       </tbody>
+                                   </table>
+                               </div>
+                           </div>
+                           <div class="xl:col-span-2 mb-4">
+                               <h6 class="mb-4 text-15 text-center">Quoted</h6>
+                           <div class="overflow-x-auto">
+                               <table class="w-full">
+                                   <thead class="ltr:text-left rtl:text-right ">
+                                       <tr>
+                                           <th class="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zink-500">Carrier</th>
+                                           <th class="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zink-500">Airline Names</th>
+                                       </tr>
+                                   </thead>
+                                   <tbody class="">
+                                       <tr>
+                                           <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Freight Charges</td>
+                                           <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                       </tr>
+                                       <tr>
+                                           <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Fuel Surcharges</td>
+                                           <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                       </tr>
+                                       <tr>
+                                           <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Security Fees</td>
+                                           <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                       </tr>
+                                       <tr>
+                                           <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Handling Fees</td>
+                                           <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                       </tr>
+                                       <tr>
+                                           <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Customs Brokerage Fees</td>
+                                           <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                       </tr>
+                                       <tr>
+                                           <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Documentation</td>
+                                           <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500"></td>
+                                       </tr>
+                                   </tbody>
+                               </table>
+                           </div>
+                           </div>
+                           <div class="xl:col-span-2 mb-2">
+                               <div class="overflow-x-auto">
+                                   <table class="w-full">
+                                       <thead class="ltr:text-left rtl:text-right ">
+                                           <tr>
+                                               <th class="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zink-500">Total</th>
+                                               <th class="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zink-500" colspan="2">0</th>
+                                           </tr>
+                                       </thead>
+                                       <tbody class="">
+                                           <tr>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Currency</td>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Dropdown</td>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Amount</td>
+                                           </tr>
+                                       </tbody>
+                                   </table>
+                               </div> 
+                           </div>
+                           <div class="xl:col-span-2 mb-2">
+                               <div class="overflow-x-auto">
+                                   <table class="w-full">
+                                       <thead class="ltr:text-left rtl:text-right ">
+                                           <tr>
+                                               <th class="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zink-500">Total</th>
+                                               <th class="px-3.5 py-2.5 font-semibold border border-slate-200 dark:border-zink-500" colspan="2">0</th>
+                                           </tr>
+                                       </thead>
+                                       <tbody class="">
+                                           <tr>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Currency</td>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Dropdown</td>
+                                               <td class="px-3.5 py-2.5 border border-slate-200 dark:border-zink-500">Amount</td>                                        </tr>
+                                       </tbody>
+                                   </table>
+                               </div> 
+                           </div>
+                           <div class="xl:col-span-4 mb-2">
+                               <div>
+                                   <label for="textArea" class="inline-block mb-2 text-base font-medium">Instructions</label>
+                                   <textarea class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="textArea" rows="3"></textarea>
+                               </div>
+                           </div>
+                           <div class="xl:col-span-1 mb-2">
+                               <label for="firstNameInput2" class="inline-block mb-2 text-base font-medium">Payment Method<span class="text-red-500">*</span></label>
+                               <input type="text" id="firstNameInput2" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Payment Method" value="123456" required>
+                           </div>
+                           <div class="xl:col-span-1 mb-2">
+                               <label for="lastNameInput2" class="inline-block mb-2 text-base font-medium">Payment Terms<span class="text-red-500">*</span></label>
+                               <input type="text" id="lastNameInput2" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter Payment Terms" value="advance payment 50%" required>
+                           </div>
+                           <div class="xl:col-span-2 mb-2">
+                               <label for="cityInput" class="inline-block mb-2 text-base font-medium">Validity of Quote <span class="text-red-500">*</span></label>
+                               <input type="datetime-local" id="cityInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" required>
+                           </div>
+                           <div class="xl:col-span-4 mb-2">
+                               <label for="cityInput" class="inline-block mb-2 text-base font-medium">Quote Version - 1 Dated<span class="text-red-500">*</span></label>
+                               <input type="datetime-local" id="cityInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" required>
+                           </div> 
+                           <div class="xl:col-span-4 mb-2">
+                               <label for="cityInput" class="inline-block mb-2 text-base font-medium">Quote Version - 2 Dated<span class="text-red-500">*</span></label>
+                               <input type="datetime-local" id="cityInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" required>
+                           </div>  
+                           <div class="xl:col-span-4 mb-2 flex justify-end gap-2">
+                               <button type="submit" class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100">Download</button>
+                               <button type="submit" class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100">Print</button>
+                               <button type="submit" class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100">Save</button>
+                           </div>
+                       </div>
+                       <div class="flex justify-end gap-2">
+                           <button type="button" class="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-700 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10"><lucide-angular name="x" [class]="'inline-block size-4'"></lucide-angular> <span class="align-middle">Cancel</span></button>
+                           <button type="submit" class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100">Create Booking</button>
+                       </div>
+                   </form>  
+               </div>
+           </div>
+       </div><!--end col--> 
+   
+       <div class="xl:col-span-9" *ngIf="Documents">
+           <div class="card">
+               <div class="card-body">
+                   <form action="javascript:void(0);">
+                       <div class="grid grid-cols-1 gap-x-5 md:grid-cols-2 xl:grid-cols-3">
+                           <div>
+                               <input type="file" class="cursor-pointer form-file form-file-sm border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500" placeholder="Enter your name">
+                           </div>
+                           <div>
+                               <button type="button" class="text-white bg-green-500 border-green-500 btn hover:text-white hover:bg-green-600 hover:border-green-600 focus:text-white focus:bg-green-600 focus:border-green-600 focus:ring focus:ring-green-100 active:text-white active:bg-green-600 active:border-green-600 active:ring active:ring-green-100 dark:ring-green-400/10"><lucide-angular name="download" [class]="'inline-block size-4 mr-1'"></lucide-angular> <span class="align-middle"> Download</span></button>
+                               &nbsp;
+                               <button type="reset"  class="text-white bg-red-500 border-red-500 btn hover:text-white hover:bg-red-600 hover:border-red-600 focus:text-white focus:bg-red-600 focus:border-red-600 focus:ring focus:ring-red-100 active:text-white active:bg-red-600 active:border-red-600 active:ring active:ring-red-100 dark:ring-custom-400/20">Delete</button>                            
+                           </div>
+                       </div>
+                       <div class="flex justify-end gap-2">
+                           <button type="button" class="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-700 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10"><lucide-angular name="x" [class]="'inline-block size-4'"></lucide-angular> <span class="align-middle">Cancel</span></button>
+                           <button type="submit" class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100">Save</button>
+                       </div>
+                   </form>  
+               </div>
+           </div>
+       </div><!--end col--> 
+   
+</div><!--end grid-->
+
+
+<ng-modals id="addContactModal" [placement]="'modal-center'" className="fixed flex flex-col transition-all duration-300 ease-in-out left-2/4 z-drawer -translate-x-2/4 -translate-y-2/4 ">
+    <div class="w-screen md:w-[30rem] bg-white shadow rounded-md dark:bg-zink-600 flex flex-col h-full">
+        <div class="flex items-center justify-between p-4 border-b dark:border-zink-500">
+            <h5 class="text-16">Add Quotation</h5>
+            <button data-modal-close="addContactModal" dismissModal [ModalDismiss]="'addContactModal'" class="transition-all duration-200 ease-linear text-slate-400 hover:text-red-500"><lucide-angular name="x" class="size-5"></lucide-angular></button>
+        </div>
+        <div class="max-h-[calc(theme('height.screen')_-_180px)] overflow-y-auto p-4">
+            <form>
+                <div class="grid grid-cols-1 gap-x-5 md:grid-cols-2 xl:grid-cols-3">
+                <div class="mb-2">
+                    <label for="contactnameInput" class="inline-block mb-2 text-base font-medium">Name<span class="text-red-500">*</span></label>
+                    <input type="text" id="contactnameInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="" required>
+                </div>
+                <div class="mb-2">
+                    <label for="destinationInput" class="inline-block mb-2 text-base font-medium">Quote#<span class="text-red-500">*</span></label>
+                    <input type="text" id="destinationInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="" required>
+                </div>
+                <div class="mb-2">
+                    <label for="destinationInput" class="inline-block mb-2 text-base font-medium">Date<span class="text-red-500">*</span></label>
+                    <input type="date" id="destinationInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="" required>
+                </div>
+                <div class="mb-2">
+                    <label for="destinationInput" class="inline-block mb-2 text-base font-medium">Phone<span class="text-red-500">*</span></label>
+                    <input type="text" id="destinationInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="" required>
+                </div>
+                <div class="mb-2">
+                    <label for="destinationInput" class="inline-block mb-2 text-base font-medium">Email<span class="text-red-500">*</span></label>
+                    <input type="email" id="destinationInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="" required>
+                </div>
+                <div class="mb-2">
+                    <label for="stateInput" class="inline-block mb-2 text-base font-medium">Customer Type<span class="text-red-500">*</span></label>
+                    <select class="form-select border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="stateInput" required>
+                        <option selected="" disabled="" value="">Choose...</option>
+                        <option>Individual Customer</option>
+                        <option>Coorporate Customer</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <label for="stateInput" class="inline-block mb-2 text-base font-medium">Mode<span class="text-red-500">*</span></label>
+                    <select (change)="onSelect($event)" class="form-select border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="stateInput" required>
+                        <option selected="" disabled="" value="">Choose...</option>
+                        <option>Ocean</option>
+                        <option>Air</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <label for="stateInput" class="inline-block mb-2 text-base font-medium">Status<span class="text-red-500">*</span></label>
+                    <select class="form-select border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="stateInput" required>
+                        <option selected="" disabled="" value="">Choose...</option>
+                        <option>Not Quoted</option>
+                        <option>Quoted</option>
+                        <option>Accepted</option>
+                        <option>Not Converted</option>
+                    </select>
+                </div>
+             </div>
+                <div class="flex justify-end gap-2 mt-4">
+                    <button type="reset" dismissModal [ModalDismiss]="'addContactModal'" class="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-600 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10">Cancel</button>
+                    <button type="submit" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Add Quotation</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</ng-modals>
+
+
+
+
