@@ -27,20 +27,25 @@ export class BookingsComponent implements OnInit {
   Air:boolean = false;
   Documents:boolean = false;
 
+  Basic:boolean = false;
+  Description:boolean = false;
+  Entities:boolean = false;
+  Equipments:boolean = false;
+
   air:boolean = false;
   ocean:boolean = false;
 
 
   ngOnInit(): void {
-    this.toggle('Booking');  
+
   }
 
 
   toggle(type:string){
     if (type == 'Booking'){
-     this.Booking = true;
-     this.Air =false;
-     this.Documents = false;
+      this.Booking = true;
+      this.Air =false;
+      this.Documents = false;
     }else if (type == 'Air'){
       this.Booking = false;
       this.Air =true;
@@ -52,15 +57,51 @@ export class BookingsComponent implements OnInit {
     }
   }
 
+  toggle1(type:string){
+    if (type == 'Basic'){
+     this.Basic = true;
+     this.Description =false;
+     this.Entities = false;
+     this.Equipments = false;
+     this.Booking = false;
+    }else if (type == 'Description'){
+     this.Basic = false;
+     this.Description =true;
+     this.Entities = false;
+     this.Equipments = false;
+     this.Booking = false;
+    }else if (type == 'Entities'){
+     this.Basic = false;
+     this.Description =false;
+     this.Entities = true;
+     this.Equipments = false;
+     this.Booking = false;
+    }else if (type == 'Equipments'){
+     this.Basic = false;
+     this.Description =false;
+     this.Entities = false;
+     this.Equipments = true;
+     this.Booking = false;
+    }else if (type == 'Booking'){
+     this.Basic = false;
+     this.Description =false;
+     this.Entities = false;
+     this.Equipments = false;
+     this.Booking = true;
+    }
+  }
+
 
   onSelect(event: any) {
     let type = event.target.value;
     if (type == 'Air') {
       this.air = true;
       this.ocean = false;
+      this.toggle('Booking');  
     } else if (type == 'Ocean') {
       this.air = false;
       this.ocean = true;
+      this.toggle1('Basic');  
     }
 
   }

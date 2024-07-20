@@ -1,0 +1,28 @@
+<app-page-title [title]="'Admin-panel'" [pagetitle]="'Admin'"></app-page-title>
+
+<div class="grid grid-cols-1 gap-x-5 xl:grid-cols-12 card">
+    <div class="xl:col-span-12">
+        <div class="collapsible">
+            <button appCollapsible class="flex items-center w-full p-3 mb-0 text-left collapsible-header group/item">
+                <h6 class="ml-2 text-15">General</h6>
+                <div class="ltr:ml-auto rtl:mr-auto shrink-0">
+                    <lucide-angular name="chevron-down" [class]="'hidden size-4 group-[.show]/item:inline-block'"></lucide-angular>
+                    <lucide-angular name="chevron-up" [class]="'inline-block  size-4 group-[.show]/item:hidden'"></lucide-angular>
+                </div>
+            </button>
+            <div class="hidden mb-0 collapsible-content card-body">
+            <div class="grid grid-cols-1 gap-x-5 xl:grid-cols-12">
+                <div class="xl:col-span-4">
+                    <label>Add Carrier</label>
+                </div>
+                <div class="xl:col-span-4">
+                    <label>Add Airway Bill Number</label>
+                </div>
+                <div class="xl:col-span-4">
+                    <label>Shipper information</label>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

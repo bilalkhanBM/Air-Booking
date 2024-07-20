@@ -11,9 +11,9 @@ export const MENU: MenuItem[] = [
     //     label: 'notification',
     //     icon: 'bell-ring',
     //     // link: '/',
-    // },    
+    // }, 
     {
-        id: 2,
+        id: 1,
         label: 'dashboards',
         icon: 'pie-chart',
         link: '/',
@@ -50,6 +50,12 @@ export const MENU: MenuItem[] = [
         //     },
         // ]
     },
+    {
+        id: 2,
+        label: 'chat',
+        icon: 'messages-square',
+        link: '/apps-chat',
+    },   
     {
         id: 3,
         label: 'Quotation',
@@ -100,7 +106,7 @@ export const MENU: MenuItem[] = [
         id: 8,
         label: 'Admin Panel',
         icon: 'monitor-dot',
-        // link: '/',
+        link: '/admin-panel',
     }, 
     // {
     //     id: 1_1,

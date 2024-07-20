@@ -128,6 +128,7 @@ import { MonthGridComponent } from "./calendar/month-grid/month-grid.component";
 import { MultiMonthStackComponent } from "./calendar/multi-month-stack/multi-month-stack.component";
 import { CentralizedQuotationComponent } from "./centralized-quotation/centralized-quotation.component";
 import { BookingsComponent } from "./bookings/bookings.component";
+import { AdminPanelComponent } from "./admin-panel/admin-panel.component";
 
 
 export const PAGE_ROUTES: Route[] = [
@@ -265,6 +266,8 @@ export const PAGE_ROUTES: Route[] = [
 
     { path: 'centralized-quotation', component: CentralizedQuotationComponent },
     { path: 'bookings', component: BookingsComponent },
+    { path: 'admin-panel', component: AdminPanelComponent },
+
 
 
 
